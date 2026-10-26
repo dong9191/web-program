@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립순천대학교 포털 웹사이트</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    },
+                    colors: {
+                        scnu: {
+                            blue: '#005bac',
+                            darkblue: '#00407a',
+                            light: '#f4f7fb',
+                            grey: '#666666',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333333;
+        }
+        /* Hide scrollbar for clean horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen relative flex flex-col justify-between">
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="w-10 h-10 bg-scnu-blue text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <span class="text-xl md:text-2xl font-black text-gray-800 tracking-tight">국립순천대학교</span>
+                    <span class="hidden md:inline-block text-xs text-scnu-blue font-semibold ml-2 border border-scnu-blue px-1.5 py-0.5 rounded">국립대</span>
+                </div>
+            </div>
+
+            <!-- Top Navigation Links (Desktop) -->
+            <nav class="hidden lg:flex items-center space-x-8 font-semibold text-gray-700 text-base">
+                <a href="#" class="hover:text-scnu-blue transition-colors">대학홍보</a>
+                <a href="#" class="hover:text-scnu-blue transition-colors flex items-center gap-1">
+                    입학안내 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i>
+                </a>
+                <a href="#" class="hover:text-scnu-blue transition-colors">스쿨(대학)/대학원</a>
+                <a href="#" class="hover:text-scnu-blue transition-colors">학사안내/취업</a>
+                <a href="#" class="hover:text-scnu-blue transition-colors">향림광장</a>
+                <a href="#" class="hover:text-scnu-blue transition-colors">대학소개</a>
+            </nav>
+
+            <!-- Right Utility Icons -->
+            <div class="flex items-center">
+                <!-- Language Selector -->
+                <div class="relative px-3 py-1 border-r border-gray-300 hidden md:flex items-center text-sm font-medium text-gray-600 cursor-pointer hover:text-scnu-blue">
+                    Kor <i class="fa-solid fa-chevron-down text-xs ml-1.5"></i>
+                </div>
+                <!-- User Icon -->
+                <button class="p-3 text-gray-600 hover:text-scnu-blue transition-colors" title="마이페이지">
+                    <i class="fa-regular fa-user text-lg"></i>
+                </button>
+                <!-- Search Icon -->
+                <button class="p-3 text-gray-600 hover:text-scnu-blue transition-colors" title="검색">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <!-- Menu Toggle Button -->
+                <button class="bg-black text-white w-14 h-20 flex items-center justify-center hover:bg-scnu-blue transition-colors ml-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT BODY -->
+    <main class="max-w-[1400px] mx-auto px-4 md:px-8 py-8 flex-1 w-full">
+
+        <!-- 1. QUICK MENU CAROUSEL / GRID -->
+        <section class="relative my-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <!-- Slider Left Arrow -->
+            <button class="absolute -left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-600 shadow-md hover:bg-gray-50 z-10 transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Quick Service Items -->
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-4 text-center">
+                <!-- Item 1 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">향림통시스템</span>
+                </a>
+                <!-- Item 2 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">인터넷증명발급</span>
+                </a>
+                <!-- Item 3 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">진로취업포털</span>
+                </a>
+                <!-- Item 4 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">현장실습지원</span>
+                </a>
+                <!-- Item 5 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">e-캠퍼스</span>
+                </a>
+                <!-- Item 6 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">교원초빙시스템</span>
+                </a>
+                <!-- Item 7 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">시설물사용신청</span>
+                </a>
+                <!-- Item 8 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">웹메일</span>
+                </a>
+                <!-- Item 9 -->
+                <a href="#" class="group flex flex-col items-center justify-center p-3 rounded-xl hover:bg-blue-50/60 transition-all duration-200">
+                    <div class="w-14 h-14 bg-blue-50 text-scnu-blue rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 group-hover:bg-scnu-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-scnu-blue">A/S 원격지원</span>
+                </a>
+            </div>
+
+            <!-- Slider Right Arrow -->
+            <button class="absolute -right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-600 shadow-md hover:bg-gray-50 z-10 transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Page Indicators (Dots) -->
+            <div class="flex justify-center items-center gap-1.5 mt-4">
+                <span class="w-6 h-2 bg-scnu-blue rounded-full cursor-pointer"></span>
+                <span class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer hover:bg-gray-400"></span>
+            </div>
+        </section>
+
+        <!-- 2. TWO COLUMN SECTION: LATEST & SCHEDULES -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
+
+            <!-- LEFT COLUMN: # THE LATEST (7 COLS) -->
+            <section class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <!-- Section Header -->
+                <div class="flex items-center justify-between border-b pb-4 mb-4">
+                    <div>
+                        <h2 class="text-3xl font-black tracking-tight text-gray-900 flex items-center gap-2">
+                            <span class="text-gray-300 font-light">#</span> THE LATEST
+                        </h2>
+                        <p class="text-sm text-gray-500 mt-1">
+                            <strong class="text-black font-semibold">NOTICE</strong> 국립순천대학교에서 전하는 주요 정보를 확인하세요.
+                        </p>
+                    </div>
+                    <a href="#" class="flex items-center border border-gray-300 hover:border-black text-xs font-semibold px-4 py-2 group transition">
+                        더보기 <span class="ml-2 text-base group-hover:translate-x-0.5 transition-transform">+</span>
+                    </a>
+                </div>
+
+                <!-- Tabs -->
+                <div class="flex border-b border-gray-200 mb-6 text-base font-bold text-gray-500 space-x-6" id="latest-tabs">
+                    <button class="tab-btn pb-2 border-b-2 border-scnu-blue text-scnu-blue" onclick="switchTab(this)">의대유치</button>
+                    <button class="tab-btn pb-2 border-b-2 border-transparent hover:text-gray-800" onclick="switchTab(this)">공지사항</button>
+                    <button class="tab-btn pb-2 border-b-2 border-transparent hover:text-gray-800" onclick="switchTab(this)">학사</button>
+                    <button class="tab-btn pb-2 border-b-2 border-transparent hover:text-gray-800" onclick="switchTab(this)">장학</button>
+                </div>
+
+                <!-- News Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Card 1 -->
+                    <a href="#" class="block bg-gray-50 p-5 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-200 flex flex-col justify-between h-48">
+                        <div>
+                            <span class="inline-block text-xs text-gray-500 bg-gray-200/80 px-2.5 py-1 rounded-full mb-3">의대유치</span>
+                            <h3 class="font-bold text-gray-800 text-sm leading-snug line-clamp-3">
+                                광주지방법원 결정에 대한 국립순천대학교 입장
+                            </h3>
+                        </div>
+                        <span class="text-xs text-gray-400">2026.10.24</span>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="#" class="block bg-gray-50 p-5 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-200 flex flex-col justify-between h-48">
+                        <div>
+                            <span class="inline-block text-xs text-gray-500 bg-gray-200/80 px-2.5 py-1 rounded-full mb-3">의대유치</span>
+                            <h3 class="font-bold text-gray-800 text-sm leading-snug line-clamp-3">
+                                국립의과대학 후보대학 선정 논란에 관한 국립순천대학교 입장
+                            </h3>
+                        </div>
+                        <span class="text-xs text-gray-400">2026.10.22</span>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="#" class="block bg-gray-50 p-5 rounded-xl border border-gray-100 hover:shadow-md hover:-translate-y-1 transition duration-200 flex flex-col justify-between h-48">
+                        <div>
+                            <span class="inline-block text-xs text-gray-500 bg-gray-200/80 px-2.5 py-1 rounded-full mb-3">의대유치</span>
+                            <h3 class="font-bold text-gray-800 text-sm leading-snug line-clamp-3">
+                                국립의과대학 신설 후보대학 선정에 대한 국립순천대학교 입장문
+                            </h3>
+                        </div>
+                        <span class="text-xs text-gray-400">2026.10.20</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: # SCHEDULES (5 COLS) -->
+            <section class="lg:col-span-5 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <!-- Section Header -->
+                <div>
+                    <div class="flex items-center justify-between border-b pb-4 mb-4">
+                        <div>
+                            <h2 class="text-3xl font-black tracking-tight text-gray-900 flex items-center gap-2">
+                                <span class="text-gray-300 font-light">#</span> SCHEDULES
+                            </h2>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <strong class="text-black font-semibold">학사일정</strong> 이번 달 주요 학사일정을 확인하세요.
+                            </p>
+                        </div>
+                        <a href="#" class="flex items-center border border-gray-300 hover:border-black text-xs font-semibold px-4 py-2 group transition">
+                            더보기 <span class="ml-2 text-base group-hover:translate-x-0.5 transition-transform">+</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blue Schedule Banner Box -->
+                <div class="bg-scnu-blue text-white rounded-2xl p-6 relative shadow-lg overflow-hidden mt-2">
+                    <!-- Banner Header -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold tracking-wide">Today</span>
+                            <span class="text-xl font-medium text-blue-100">2026.10.26</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+                                <i class="fa-solid fa-chevron-left text-sm"></i>
+                            </button>
+                            <button class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+                                <i class="fa-solid fa-chevron-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Cards Container -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Event 1 -->
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:bg-white/20 transition">
+                            <span class="text-xs text-blue-200 block mb-1">2026.10.19. ~ 2026.10.23.</span>
+                            <h4 class="font-bold text-sm line-clamp-2">2026학년도 2학기 중간강의평가 시행</h4>
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:bg-white/20 transition">
+                            <span class="text-xs text-blue-200 block mb-1">2026.10.28. ~ 2026.10.28.</span>
+                            <h4 class="font-bold text-sm line-clamp-2">개교기념일 행사 개최 및 휴업 안내</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FLOATING RIGHT SIDEBAR MENU -->
+    <aside class="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col bg-white border border-gray-200 shadow-xl rounded-l-2xl overflow-hidden w-20 text-center">
+        <!-- Popup Badge Item -->
+        <a href="#" class="p-4 border-b border-gray-100 hover:bg-gray-50 flex flex-col items-center justify-center group relative">
+            <div class="relative mb-1">
+                <i class="fa-regular fa-bell text-xl text-gray-700 group-hover:text-scnu-blue"></i>
+                <span class="absolute -top-1 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">22</span>
+            </div>
+            <span class="text-xs font-bold text-gray-700 group-hover:text-scnu-blue">POPUP</span>
+        </a>
+
+        <!-- User Menu Item -->
+        <a href="#" class="p-4 border-b border-gray-100 hover:bg-gray-50 flex flex-col items-center justify-center group">
+            <i class="fa-solid fa-sitemap text-xl text-gray-700 group-hover:text-scnu-blue mb-1"></i>
+            <span class="text-xs font-semibold text-gray-700 group-hover:text-scnu-blue">사용자메뉴</span>
+        </a>
+
+        <!-- Related Agencies Item -->
+        <a href="#" class="p-4 hover:bg-gray-50 flex flex-col items-center justify-center group">
+            <i class="fa-solid fa-landmark text-xl text-gray-700 group-hover:text-scnu-blue mb-1"></i>
+            <span class="text-xs font-semibold text-gray-700 group-hover:text-scnu-blue">관련기관</span>
+        </a>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-400 py-8 border-t border-gray-700 text-xs mt-12">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-gray-300">국립순천대학교 (Sunchon National University)</p>
+                <p class="mt-1">(57922) 전라남도 순천시 중앙로 255 (석현동) 국립순천대학교 | TEL: 061-750-3114</p>
+                <p class="mt-0.5">Copyright © 2026 Sunchon National University. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-4 text-sm">
+                <a href="#" class="hover:text-white">개인정보처리방침</a>
+                <a href="#" class="hover:text-white">이메일무단수집거부</a>
+                <a href="#" class="hover:text-white">찾아오시는길</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab Switching Logic -->
+    <script>
+        function switchTab(element) {
+            const tabs = document.querySelectorAll('#latest-tabs .tab-btn');
+            tabs.forEach(tab => {
+                tab.classList.remove('border-scnu-blue', 'text-scnu-blue');
+                tab.classList.add('border-transparent', 'text-gray-500');
+            });
+            element.classList.remove('border-transparent', 'text-gray-500');
+            element.classList.add('border-scnu-blue', 'text-scnu-blue');
+        }
+    </script>
+</body>
+</html>
